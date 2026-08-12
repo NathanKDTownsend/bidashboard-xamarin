@@ -33,4 +33,4 @@ Designed and built the full application solo, including data loading architectur
 ## How to Run
 **Note:** Xamarin reached end-of-life in May 2024 and was succeeded by .NET MAUI, so this project is no longer runnable on current tooling out of the box. To run it, you'll need Visual Studio with an older Xamarin/mobile workload installed (pre-2024), plus the Xamarin Android SDK / Xamarin.iOS components matching that version.
 
-I deliberately built this on Xamarin.Forms rather than MAUI as a way to challenge myself with a framework that was already less actively supported and documented at the time — working through its quirks and constraints without the newer tooling's conveniences.
+I deliberately built this on Xamarin.Forms rather than MAUI as a way to challenge myself with a framework that was already less actively supported and documented at the time, working through its quirks and constraints without the newer tooling's conveniences.
