@@ -2,7 +2,7 @@
 
 A cross-platform Business Intelligence dashboard built with Xamarin.Forms and C#, giving users a consolidated view of vehicle sales data with interactive charts, filters, and trend analysis.
 
-<img src="screenshots/year-filter-view.png" width="220"/> <img src="screenshots/quarter-quantity-filter-view.png" width="220"/>
+<img src="year-filter-view.png" width="220"/> <img src="quarter-quantity-filter-view.png" width="220"/>
 
 ## Overview
 
