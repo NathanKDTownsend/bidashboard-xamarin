@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             x:Class="BIDashboard.MainPage"
+             Title="BI Dashboard">
+
+    <StackLayout Padding="10" Spacing="15">
+
+        <Label Text="BI Dashboard" FontSize="Large" HorizontalOptions="Center" />
+
+        <!-- Filters -->
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <Picker x:Name="YearPicker" Title="Year" SelectedIndexChanged="OnFilterChanged"/>
+            <Picker x:Name="RegionPicker" Title="Region" SelectedIndexChanged="OnFilterChanged"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <Picker x:Name="NamePicker" Title="Vehicle/Name" SelectedIndexChanged="OnFilterChanged"/>
+            <Picker x:Name="QTRPicker" Title="Quarter" SelectedIndexChanged="OnFilterChanged"/>
+            <Picker x:Name="QuantityPicker" Title="Quantity" SelectedIndexChanged="OnFilterChanged"/>
+        </StackLayout>
+
+        <!-- Buttons -->
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <Button Text="Reset Filters" Clicked="OnResetClicked"/>
+            <Button Text="Reload JSON" Clicked="OnReloadJsonClicked"/>
+        </StackLayout>
+
+        <!-- Bar Chart -->
+        <syncfusion:SfChart x:Name="BarChart" HeightRequest="150" VerticalOptions="Start">
+            <syncfusion:SfChart.PrimaryAxis>
+                <syncfusion:CategoryAxis/>
+            </syncfusion:SfChart.PrimaryAxis>
+            <syncfusion:SfChart.SecondaryAxis>
+                <syncfusion:NumericalAxis/>
+            </syncfusion:SfChart.SecondaryAxis>
+        </syncfusion:SfChart>
+
+        <!-- Pie Chart -->
+        <syncfusion:SfChart x:Name="PieChart" HeightRequest="150" VerticalOptions="Start">
+            <syncfusion:SfChart.PrimaryAxis>
+                <syncfusion:CategoryAxis/>
+            </syncfusion:SfChart.PrimaryAxis>
+            <syncfusion:SfChart.SecondaryAxis>
+                <syncfusion:NumericalAxis/>
+            </syncfusion:SfChart.SecondaryAxis>
+        </syncfusion:SfChart>
+
+        <!-- ListView -->
+        <ListView x:Name="DataListView">
+            <ListView.Header>
+                <Label Text="Sales Data" FontAttributes="Bold"/>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="5" ColumnSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="60"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="{Binding Year}" Grid.Column="0"/>
+                            <Label Text="{Binding QTR}" Grid.Column="1"/>
+                            <Label Text="{Binding Region}" Grid.Column="2"/>
+                            <Label Text="{Binding Vehicle}" Grid.Column="3"/>
+                            <Label Text="{Binding Quantity}" Grid.Column="4"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+</ContentPage>
