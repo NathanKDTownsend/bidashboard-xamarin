@@ -4,7 +4,7 @@ A cross-platform Business Intelligence dashboard built with Xamarin.Forms and C#
 
 ## Overview
 
-BIDashboard reads sales data from an embedded Excel spreadsheet and caches it locally as JSON, so data remains available even after the app is closed. Users can analyse trends, compare results by geographical region, and drill into a specific vehicle's sales activity through interactive charts and filters — all backed by asynchronous data loading so the UI never freezes, regardless of dataset size.
+BIDashboard reads sales data from an embedded Excel spreadsheet and caches it locally as JSON, so data remains available even after the app is closed. Users can analyse trends, compare results by geographical region, and drill into a specific vehicle's sales activity through interactive charts and filters, all backed by asynchronous data loading so the UI never freezes, regardless of dataset size.
 
 ## Features
 
@@ -21,7 +21,7 @@ C#, Xamarin.Forms (Android & iOS), Excel/JSON data handling
 
 ## My Role
 
-Designed and built the full application solo — data loading architecture, async/concurrency handling, data models, filtering logic, and chart/list UI.
+Designed and built the full application solo, data loading architecture, async/concurrency handling, data models, filtering logic, and chart/list UI.
 
 ## How to Run
 
